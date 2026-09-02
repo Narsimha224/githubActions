@@ -18,6 +18,8 @@ jobs:
           run: echo ${{github.sha }}
         - name: event
           run: echo ${{ github.event_name }}
+        - name: secret
+          run: echo $FIRST_SECRET
           
                
               
