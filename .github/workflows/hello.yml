@@ -18,8 +18,11 @@ jobs:
           run: echo ${{github.sha }}
         - name: event
           run: echo ${{ github.event_name }}
-        - name: secret
-          run: echo $secrets.FIRST_SECRET
+        - name: Use secret
+          env:
+            MY_SECRET: ${{ secrets.FIRST_SECRET }}
+          run: echo "Secret is $MY_SECRET"
+
           
                
               
