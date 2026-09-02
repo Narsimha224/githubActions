@@ -14,5 +14,5 @@ jobs:
          - name: "listing all the files in the directory"
            run : ls -al
          - name: reading the file in the repo
-           run: echo hello.txt
+           run: cat hello.txt
          
