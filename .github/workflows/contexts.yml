@@ -1,1 +1,21 @@
+name: context-yml
 
+on: 
+  push:
+  pull_request:
+  workflow_dispatch: 
+
+
+jobs:
+  printing:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: "printing all statements"
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.actor }}
+          echo ${{ github.workflow_ref }}
+          echo ${{ github.repository }}
+          echo ${{ github.event_name }}
+          echo ${{ github.job }}
+          
