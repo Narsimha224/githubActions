@@ -15,6 +15,7 @@ jobs:
       - run:  Running Tests
 
   deploy:
+     if: true
      needs: test
      runs-on: ubuntu-latest
      steps:
