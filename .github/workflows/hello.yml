@@ -12,6 +12,13 @@ jobs:
           run: echo ${{ github.repository }}
         - name: branch name
           run:  echo ${{ github.ref_name }}
+        - name: person name
+          run: echo ${{ github.actor }}
+        - name: commit sha
+          run: echo ${{github.sha }}
+        - name: event
+          run: echo ${{ github.event_name }}
+          
                
               
                
