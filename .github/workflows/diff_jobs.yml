@@ -10,9 +10,9 @@ jobs:
       
   test:
     needs: build
-#    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Running Tests"
+      - run:  Running Tests
 
   deploy:
      needs: test
