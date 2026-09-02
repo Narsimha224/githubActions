@@ -1,1 +1,24 @@
+name: Multiple jobs
 
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building Application"
+      
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running Tests"
+
+  deploy:
+     needs: test
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "deploying application"
+       
+
+  
